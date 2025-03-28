@@ -19,8 +19,8 @@ function numRandom() {
 
 let arrHtmlGrid = misImgs.map((e) => {
   return ` 
-        <div class="col-4 instagram-photo-feed__caja-imagen p-0">
-          <img src="${e}" class="object-fit-cover" alt="">
+        <div class="col-4 w-25 ratio ratio-1x1 p-0"> 
+          <img src="${e}" class="object-fit-cover w-100 h-100" alt="">
         </div>`;
 });
 let htmlGrid = arrHtmlGrid.join(" ");
@@ -31,7 +31,7 @@ let arrHtmlPosts = misImgs.map((img) => {
   return `
         <div class="col-12 d-flex justify-content-center mb-3"> <!--permite que cada post se quede en una columna de 12 espacios-->
 
-          <div class="container-fluid ig-post">
+          <div class="container-fluid ig-post w-50">
             <div class="ig-post__header d-flex justify-content-between">
               <h4>Foto ${contador}</h4>
               <p>${contador}/${misImgs.length}</p >
