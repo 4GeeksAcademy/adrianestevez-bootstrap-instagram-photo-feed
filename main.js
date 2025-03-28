@@ -18,9 +18,11 @@ function numRandom() {
 }
 
 let arrHtmlGrid = misImgs.map((e) => {
-  return ` 
-        <div class="col-4 w-25 ratio ratio-1x1 p-0"> 
-          <img src="${e}" class="object-fit-cover w-100 h-100" alt="">
+  return `
+        <div class="col-md-4">
+          <div class="ratio ratio-1x1">
+            <img src="${e}" class="object-fit-cover img-fluid" alt="">
+          </div>
         </div>`;
 });
 let htmlGrid = arrHtmlGrid.join(" ");
@@ -31,15 +33,15 @@ let arrHtmlPosts = misImgs.map((img) => {
   return `
         <div class="col-12 d-flex justify-content-center mb-3"> <!--permite que cada post se quede en una columna de 12 espacios-->
 
-          <div class="container-fluid ig-post w-50">
-            <div class="ig-post__header d-flex justify-content-between">
+          <div class="container-fluid ig-post w-50 p-0 border border-light-subtle">
+            <div class="ig-post__header d-flex justify-content-between p-2">
               <h4>Foto ${contador}</h4>
               <p>${contador}/${misImgs.length}</p >
             </div >
             <div class="ig-post__img w-100">
               <img src="${img}" class="w-100 h-100 object-fit-cover" alt="">
             </div>
-            <div class="ig-post__icons d-flex justify-content-between mt-1">
+            <div class="ig-post__icons d-flex justify-content-between mt-1 p-2">
               <div class="ig-post__icons-left">
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-regular fa-comment"></i>
@@ -49,7 +51,7 @@ let arrHtmlPosts = misImgs.map((img) => {
                 <i class="fa-regular fa-bookmark" id="save"></i>
               </div>
             </div>
-            <div class="ig-post__body">
+            <div class="ig-post__body p-2">
               <p class="mb-0 fw-bold fs-6">${numRandom()} Likes</p>
               <p class="fs-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
